@@ -845,6 +845,16 @@ body {
 .contact-form .form-control::placeholder{
   color:#94a3b8;
 }
+.contact-link{
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-link:hover{
+  color: var(--secondary, #c9a14a);
+  text-decoration: underline;
+}
+
 
 /* Desktop refinement: خلي الفورم شكله Premium ومش “ممدود” */
 @media (min-width: 992px){
