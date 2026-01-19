@@ -1394,7 +1394,7 @@ p {
 .vision-title,
 .values-title,
 .satisfaction-title{
-  color: #fff;
+  color: #c9a14a;
   margin: 0 0 6px;
   font-size: 22px;
 }
@@ -1402,13 +1402,13 @@ p {
 .vision-sub,
 .values-sub{
   margin: 0;
-  color: #cbd5e1;
+  color: #0d1219;
   line-height: 1.9;
 }
 
 .vision-divider{
   height: 1px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(23, 26, 70, 0.08);
   margin: 18px 0;
 }
 
@@ -1444,7 +1444,7 @@ p {
   margin-top: 16px;
   padding: 14px 16px;
   border-radius: 16px;
-  background: rgba(15,23,42,0.55);
+  background: rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(255,255,255,0.08);
   color:#cbd5e1;
   line-height: 1.9;
@@ -1525,4 +1525,1013 @@ p {
   .vision-modern{ padding: 90px 0; }
   .values-grid{ grid-template-columns: 1fr; }
   .vision-img img{ height: 150px; }
+}
+
+
+/* ===== Premium Motion System ===== */
+:root{
+  --ease-premium: cubic-bezier(.2,.8,.2,1);
+}
+
+/* Reveal */
+.reveal{
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .75s var(--ease-premium), transform .75s var(--ease-premium);
+  will-change: opacity, transform;
+}
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children (cards) */
+.stagger > *{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .7s var(--ease-premium), transform .7s var(--ease-premium);
+}
+.stagger.is-visible > *{
+  opacity: 1;
+  transform: translateY(0);
+}
+.stagger.is-visible > *:nth-child(1){ transition-delay: .05s; }
+.stagger.is-visible > *:nth-child(2){ transition-delay: .12s; }
+.stagger.is-visible > *:nth-child(3){ transition-delay: .19s; }
+.stagger.is-visible > *:nth-child(4){ transition-delay: .26s; }
+.stagger.is-visible > *:nth-child(5){ transition-delay: .33s; }
+.stagger.is-visible > *:nth-child(6){ transition-delay: .40s; }
+
+/* Premium card hover */
+.premium-card{
+  transition: transform .5s var(--ease-premium), box-shadow .5s var(--ease-premium), border-color .5s var(--ease-premium);
+}
+.premium-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 26px 70px rgba(0,0,0,.25);
+  border-color: rgba(201,161,74,.35);
+}
+
+/* Subtle image motion */
+.premium-img{
+  overflow: hidden;
+}
+.premium-img img{
+  transition: transform .9s var(--ease-premium);
+}
+.premium-img:hover img{
+  transform: scale(1.04);
+}
+
+/* Navbar classy glass on scroll */
+.navbar-custom{
+  transition: background .35s var(--ease-premium), backdrop-filter .35s var(--ease-premium), border-color .35s var(--ease-premium), transform .35s var(--ease-premium);
+}
+.navbar-custom.scrolled{
+  background: rgba(10,15,28,.72);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce){
+  .reveal, .stagger > *, .premium-card, .premium-img img, .navbar-custom{
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+
+/* ===== Luxury Scroll Reveal + Hero Center (added) ===== */
+
+/* Center hero text for a classy look */
+.hero .hero-content{
+  text-align:center;
+  margin-inline:auto;
+  max-width: 880px;
+}
+.hero .hero-buttons{
+  justify-content:center;
+}
+.hero-kicker{
+  display:inline-block;
+  font-weight:600;
+  letter-spacing: .2px;
+  opacity:.92;
+  margin-bottom: 10px;
+}
+
+/* Smooth reveal from sides */
+.reveal{
+  --reveal-x: 0px;
+  --reveal-y: 26px;
+  opacity: 0;
+  transform: translate3d(var(--reveal-x), var(--reveal-y), 0);
+  transition: opacity .75s ease, transform .75s cubic-bezier(.2,.9,.2,1);
+  will-change: transform, opacity;
+}
+.reveal.reveal-left{ --reveal-x: -52px; --reveal-y: 0px; }
+.reveal.reveal-right{ --reveal-x: 52px; --reveal-y: 0px; }
+.reveal.reveal-up{ --reveal-x: 0px; --reveal-y: 42px; }
+
+.reveal.is-visible{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+/* Stagger children inside .stagger containers */
+.stagger > *{
+  opacity: 0;
+  transform: translate3d(var(--reveal-x, 0px), var(--reveal-y, 22px), 0);
+  transition: opacity .75s ease, transform .75s cubic-bezier(.2,.9,.2,1);
+  will-change: transform, opacity;
+}
+.stagger.is-visible > *{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal, .stagger > *{ transition:none !important; transform:none !important; opacity:1 !important; }
+}
+
+
+/* ============ Page Hero (Luxury) ============ */
+.page-hero{
+  position: relative;
+  min-height: 62vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  background: #0b1220;
+  overflow: hidden;
+}
+
+.page-hero .hero-bg{
+  position: absolute;
+  inset: 0;
+  background: center/cover no-repeat;
+  transform: scale(1.02);
+}
+
+.page-hero .hero-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    180deg,
+    rgba(11,18,32,0.78),
+    rgba(11,18,32,0.55),
+    rgba(11,18,32,0.85)
+  );
+}
+
+.page-hero .container{
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero .page-hero-content{
+  max-width: 920px;
+  margin-inline: auto;
+  text-align: center;
+  color: #fff;
+}
+
+.page-hero .kicker{
+  color: var(--secondary);
+  font-weight: 700;
+  letter-spacing: .6px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.page-hero h1{
+  font-size: clamp(30px, 3.2vw, 54px);
+  line-height: 1.12;
+  margin: 0 0 14px;
+}
+
+.page-hero p{
+  color: #dbe7ff;
+  opacity: .92;
+  max-width: 760px;
+  margin: 0 auto 22px;
+}
+
+.breadcrumb-lite{
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.breadcrumb-lite a{
+  color: #e2e8f0;
+  text-decoration: none;
+  opacity: .95;
+}
+.breadcrumb-lite a:hover{
+  color: var(--secondary);
+}
+
+/* Curve Cut (مثل الصورة) */
+.hero-curve{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 140px;
+  z-index: 3;
+  pointer-events: none;
+}
+.hero-curve path{
+  fill: #f8fafc; /* أبيض/فاتح تحت الهيرو */
+}
+
+/* Page section spacing helper */
+.page-wrap{
+  background: #f8fafc;
+}
+.page-section{
+  padding: var(--space-section) 0;
+}
+.page-section.dark{
+  background: #0b1220;
+}
+.page-section.dark *{
+  color: inherit;
+}
+/* .hero-under{ display:none !important; } */
+
+/* خلي الهيرو ينزل الصورة لتحت شوية */
+.page-hero .hero-bg{
+  background-position: center 68%;
+}
+/* =========================
+   Luxury Contrast Fix Patch
+   ضيفه في آخر style.css
+========================= */
+
+/* لو المتغيرات مش موجودة عندك */
+:root{
+  --primary: #0b1220;
+  --secondary: #f5c400;  /* دهبي واضح */
+  --text-dark: #0f172a;
+  --text-light: #eaf2ff;
+  --muted-light: rgba(234,242,255,.86);
+}
+
+/* Active nav link */
+.nav-links a.active{
+  color: var(--secondary) !important;
+}
+
+/* Section headers contrast */
+.section-title,
+.section-title-light{
+  color: var(--text-dark);
+}
+.section-title-light{
+  color: var(--text-light) !important;
+}
+.section-desc,
+.section-text-light{
+  color: #334155;
+}
+.section-text-light{
+  color: var(--muted-light) !important;
+}
+
+/* Labels على الخلفيات الغامقة */
+.section-label,
+.story-label{
+  color: var(--secondary) !important;
+  letter-spacing: .5px;
+}
+
+/* Ensure cards text readable */
+.vision-card,
+.values-card,
+.satisfaction-card{
+  color: #0f172a;
+}
+.vision-card .vision-sub,
+.values-card .values-sub,
+.satisfaction-card .satisfaction-text{
+  color: #334155;
+}
+
+/* Dark sections: enforce readable colors */
+.page-section.dark{
+  background: var(--primary);
+  color: var(--text-light);
+}
+.page-section.dark p,
+.page-section.dark li,
+.page-section.dark .section-desc{
+  color: var(--muted-light) !important;
+}
+
+/* Breadcrumb pill on hero */
+.breadcrumb-lite{
+  color: #eaf2ff !important;
+}
+.breadcrumb-lite a{
+  color: #eaf2ff !important;
+}
+.breadcrumb-lite a:hover{
+  color: var(--secondary) !important;
+}
+
+/* Buttons contrast (لو في زرار outline كان باهت) */
+.btn-outline-custom{
+  border-color: rgba(245,196,0,.65) !important;
+  color: #fff !important;
+}
+.btn-outline-custom:hover{
+  background: rgba(245,196,0,.12) !important;
+  border-color: var(--secondary) !important;
+}
+
+/* Improve overlay text readability in cards */
+.service-overlay,
+.project-info{
+  text-shadow: 0 6px 18px rgba(0,0,0,.45);
+}
+
+
+/* ===== Fix: Better contrast on dark sections & forms ===== */
+.section-title-light, .section-text-light,
+.page-hero h1, .page-hero p {
+  color: #fff;
+}
+
+.page-hero p,
+.section-text-light {
+  color: rgba(255,255,255,0.86);
+}
+
+.contact-modern .form-control{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: #fff;
+}
+
+.contact-modern .form-control::placeholder{
+  color: rgba(255,255,255,0.65);
+}
+
+.contact-modern .form-control:focus{
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(245,196,0,0.55);
+  box-shadow: 0 0 0 4px rgba(245,196,0,0.12);
+  color: #fff;
+}
+
+.contact-card .contact-link{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(245,196,0,0.35);
+}
+.contact-card .contact-link:hover{
+  color: var(--secondary);
+  border-bottom-color: rgba(245,196,0,0.85);
+}
+
+/* Chips/pills visibility */
+.highlight-pill,
+.value-chip{
+  border: 1px solid rgba(245,196,0,0.25);
+}
+
+/* ============ Page Hero (Curve) - Works for Home too ============ */
+.page-hero{
+  position: relative;
+  min-height: 62vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  background: #0b1220;
+  overflow: hidden;
+}
+
+.page-hero.home-hero{
+  min-height: 78vh;
+  padding: 140px 0 90px;
+}
+
+.page-hero .hero-bg{
+  position: absolute;
+  inset: 0;
+  background: center/cover no-repeat;
+  transform: scale(1.02);
+}
+
+.page-hero .hero-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    180deg,
+    rgba(11,18,32,0.78),
+    rgba(11,18,32,0.52),
+    rgba(11,18,32,0.88)
+  );
+}
+
+.page-hero .container{ position: relative; z-index: 2; }
+
+.page-hero .page-hero-content{
+  max-width: 980px;
+  margin-inline: auto;
+  text-align: center;
+  color: #fff;
+}
+
+.page-hero .kicker{
+  color: var(--secondary);
+  font-weight: 700;
+  letter-spacing: .6px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.page-hero h1{
+  font-size: clamp(30px, 3.2vw, 56px);
+  line-height: 1.12;
+  margin: 0 0 14px;
+}
+
+.page-hero p{
+  color: rgba(255,255,255,0.86);
+  max-width: 780px;
+  margin: 0 auto 22px;
+}
+
+.hero-curve{
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 140px;
+  z-index: 3;
+  pointer-events: none;
+}
+.hero-curve path{ fill: #f8fafc; }
+
+/* ============ Reveal animations (elements only) ============ */
+.reveal-text, .reveal-item{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .85s ease, transform .85s ease;
+  will-change: transform, opacity;
+}
+
+.reveal-left{
+  opacity: 0;
+  transform: translateX(18px);
+  transition: opacity .85s ease, transform .85s ease;
+  will-change: transform, opacity;
+}
+
+.reveal-right{
+  opacity: 0;
+  transform: translateX(-18px);
+  transition: opacity .85s ease, transform .85s ease;
+  will-change: transform, opacity;
+}
+
+.reveal-in{
+  opacity: 1 !important;
+  transform: translateX(0) translateY(0) !important;
+}
+
+/* delays صغيرة للفخامة */
+.reveal-d1{ transition-delay: .06s; }
+.reveal-d2{ transition-delay: .12s; }
+.reveal-d3{ transition-delay: .18s; }
+.reveal-d4{ transition-delay: .24s; }
+
+/* Fix contrast - forms */
+.contact-modern .form-control{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: #fff;
+}
+.contact-modern .form-control::placeholder{ color: rgba(255,255,255,0.65); }
+.contact-modern .form-control:focus{
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(245,196,0,0.55);
+  box-shadow: 0 0 0 4px rgba(245,196,0,0.12);
+  color: #fff;
+}
+/* ============ Hero Curve + Navy Under (Luxury) ============ */
+.page-hero{
+  position: relative;
+  min-height: 62vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  background: #071426;
+  overflow: hidden;
+}
+
+.page-hero.home-hero{
+  min-height: 78vh;
+  padding: 140px 0 95px;
+}
+
+.page-hero .hero-bg{
+  position: absolute;
+  inset: 0;
+  background: center/cover no-repeat;
+  /* نزلنا الصورة لتحت شوية */
+  background-position: center 68%;
+  transform: scale(1.02);
+}
+
+.page-hero .hero-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    180deg,
+    rgba(7,20,38,0.78),
+    rgba(7,20,38,0.46),
+    rgba(7,20,38,0.92)
+  );
+}
+
+.page-hero .container{ position: relative; z-index: 3; }
+
+.page-hero .page-hero-content{
+  max-width: 980px;
+  margin-inline: auto;
+  text-align: center;
+  color: #fff;
+}
+
+.page-hero .kicker{
+  color: var(--secondary);
+  font-weight: 700;
+  letter-spacing: .6px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.page-hero h1{
+  font-size: clamp(30px, 3.2vw, 56px);
+  line-height: 1.12;
+  margin: 0 0 14px;
+}
+
+.page-hero p{
+  color: rgba(255,255,255,0.86);
+  max-width: 780px;
+  margin: 0 auto 22px;
+}
+
+/* Navy under hero (تحت الخلفية) */
+
+
+.hero-curve{
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 150px;
+  z-index: 2;
+  pointer-events: none;
+}
+.hero-curve path{
+  fill: #ffffff;
+}
+.hero-under{
+  background: #ffffff;  /* ده اللون */
+}
+
+
+/* اول سكشن يطلع فوق النافي (فخامة) */
+.lifted-surface{
+  position: relative;
+  z-index: 5;
+  margin-top: -30px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 22px 60px rgba(0,0,0,0.18);
+}
+
+/* ============ Element-only reveal animations ============ */
+.reveal-text, .reveal-item{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .85s ease, transform .85s ease;
+  will-change: transform, opacity;
+}
+
+.reveal-left{
+  opacity: 0;
+  transform: translateX(18px);
+  transition: opacity .85s ease, transform .85s ease;
+  will-change: transform, opacity;
+}
+
+.reveal-right{
+  opacity: 0;
+  transform: translateX(-18px);
+  transition: opacity .85s ease, transform .85s ease;
+  will-change: transform, opacity;
+}
+
+.reveal-in{
+  opacity: 1 !important;
+  transform: translateX(0) translateY(0) !important;
+}
+
+.reveal-d1{ transition-delay: .06s; }
+.reveal-d2{ transition-delay: .12s; }
+.reveal-d3{ transition-delay: .18s; }
+.reveal-d4{ transition-delay: .24s; }
+
+/* ===== Fix: Better contrast on dark sections & forms ===== */
+.section-title-light, .section-text-light { color: #fff; }
+.section-text-light { color: rgba(255,255,255,0.86); }
+
+.contact-modern .form-control{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: #fff;
+}
+.contact-modern .form-control::placeholder{ color: rgba(255,255,255,0.65); }
+.contact-modern .form-control:focus{
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(245,196,0,0.55);
+  box-shadow: 0 0 0 4px rgba(245,196,0,0.12);
+  color: #fff;
+}
+
+.contact-card .contact-link{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(245,196,0,0.35);
+}
+.contact-card .contact-link:hover{
+  color: var(--secondary);
+  border-bottom-color: rgba(245,196,0,0.85);
+}
+
+/* Chips/pills visibility */
+.highlight-pill,
+.value-chip{
+  border: 1px solid rgba(245,196,0,0.25);
+}
+/* FORCE: remove any navy block under hero */
+.hero-under{ display:none !important; }
+
+/* FORCE: make the curve NOT navy */
+.hero-curve path{ fill:#ffffff !important; }
+
+/* OPTIONAL: if the section after hero has a dark background, force it white */
+body{ background:#ffffff; }
+
+/* OPTIONAL: if hero itself looks like it has a navy bottom, force it */
+.page-hero{ background: transparent !important; }
+
+.btn-outline-custom{
+  color: #0b2a3d !important;        /* لون نص غامق */
+  border: 2px solid #f5c400;        /* الدهبي */
+  background: transparent;
+  font-weight: 600;
+}
+
+.btn-outline-custom:hover{
+  background: #f5c400;              /* دهبي */
+  color: #071426 !important;        /* نافي غامق */
+}
+
+
+.section-title,
+.section-desc,
+.section-text,
+.projects-head h2,
+.projects-head p{
+  color: #0b2a3d;   /* نافي غامق */
+}
+
+.btn.c1{
+  color: #ffffff !important;   /* لون الكلام أبيض */
+}
+.btn.c2{
+  color: #000000 !important;   /* لون الكلام أبيض */
+}
+
+.vision-list.v3{
+  color: #000000 !important; 
+}
+
+
+/* =======================
+   Contact EN - Light Fixes
+   (No impact on dark sections)
+======================= */
+
+/* 1) اجبار النصوص في السكاشن الفاتحة تكون غامقة */
+.page-wrap .page-section:not(.dark){
+  background: #ffffff;
+  color: #0b2a3d;
+}
+
+/* عنوان/وصف السكشن في الصفحات الفاتحة */
+.page-wrap .page-section:not(.dark) .section-label{
+  color: #b58a00; /* دهبي هادي */
+  font-weight: 700;
+}
+
+.page-wrap .page-section:not(.dark) .section-title,
+.page-wrap .page-section:not(.dark) .section-desc{
+  color: #0b2a3d;
+}
+
+/* 2) contact cards على خلفية فاتحة */
+.page-wrap .page-section:not(.dark) .contact-card{
+  background: #ffffff;
+  border: 1px solid rgba(11,42,61,0.10);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+}
+
+.page-wrap .page-section:not(.dark) .contact-card h4{
+  color: #071426;
+}
+
+.page-wrap .page-section:not(.dark) .contact-card p,
+.page-wrap .page-section:not(.dark) .contact-card small{
+  color: rgba(11,42,61,0.85);
+}
+
+/* 3) Links في صفحة Contact */
+.page-wrap .page-section:not(.dark) .contact-link{
+  color: #0b2a3d;
+  text-decoration: none;
+  font-weight: 700;
+}
+.page-wrap .page-section:not(.dark) .contact-link:hover{
+  color: #f5c400;
+}
+
+/* 4) Form inputs على خلفية فاتحة */
+.page-wrap .page-section:not(.dark) .contact-form{
+  background: #ffffff;
+  border: 1px solid rgba(11,42,61,0.10);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+}
+
+.page-wrap .page-section:not(.dark) .contact-form .form-control{
+  background: #f7f9fb;
+  border: 1px solid rgba(11,42,61,0.14);
+  color: #0b2a3d;
+}
+
+.page-wrap .page-section:not(.dark) .contact-form .form-control::placeholder{
+  color: rgba(11,42,61,0.55);
+}
+
+.page-wrap .page-section:not(.dark) .contact-form .form-control:focus{
+  border-color: rgba(245,196,0,0.7);
+  box-shadow: 0 0 0 4px rgba(245,196,0,0.18);
+}
+
+/* 5) زر outline في الصفحات الفاتحة (عشان كان النص يضيع) */
+.page-wrap .page-section:not(.dark) .btn-outline-custom{
+  color: #0b2a3d !important;
+  border: 2px solid #f5c400;
+  background: transparent;
+}
+
+.page-wrap .page-section:not(.dark) .btn-outline-custom:hover{
+  background: #f5c400;
+  color: #071426 !important;
+}
+
+/* 6) لو انت عامل الزر c1 عايزه دايمًا أبيض في الدارك فقط */
+.page-section.dark .btn.c1{
+  color: #ffffff !important;
+}
+
+/* 7) Fix pills على الخلفية الفاتحة */
+.page-wrap .page-section:not(.dark) .highlight-pill{
+  color: #0b2a3d;
+  background: rgba(245,196,0,0.12);
+  border: 1px solid rgba(245,196,0,0.35);
+}
+/* ==============================
+   Services EN – Color Fix (Light)
+============================== */
+
+/* السكاشن الفاتحة */
+.page-wrap .page-section:not(.dark){
+  background:#ffffff;
+  color:#0b2a3d;
+}
+
+/* العناوين */
+.page-wrap .page-section:not(.dark) h1,
+.page-wrap .page-section:not(.dark) h2,
+.page-wrap .page-section:not(.dark) h3,
+.page-wrap .page-section:not(.dark) h4{
+  color:#071426;
+}
+
+/* الوصف */
+.page-wrap .page-section:not(.dark) p,
+.page-wrap .page-section:not(.dark) .section-desc,
+.page-wrap .page-section:not(.dark) .vision-sub{
+  color:rgba(11,42,61,0.85);
+}
+
+/* section label */
+.page-wrap .page-section:not(.dark) .section-label{
+  color:#b58a00;
+  font-weight:700;
+}
+
+/* ==============================
+   Service Cards Overlay Text
+============================== */
+.page-wrap .page-section:not(.dark) .service-overlay{
+  background:linear-gradient(
+    to top,
+    rgba(7,20,38,0.88),
+    rgba(7,20,38,0.45),
+    rgba(7,20,38,0.15)
+  );
+}
+
+.page-wrap .page-section:not(.dark) .service-overlay h3,
+.page-wrap .page-section:not(.dark) .service-overlay p,
+.page-wrap .page-section:not(.dark) .service-overlay span{
+  color:#ffffff;
+}
+
+/* ==============================
+   Vision Cards (What’s Included / Industries)
+============================== */
+.page-wrap .page-section:not(.dark) .vision-card{
+  background:#ffffff;
+  border:1px solid rgba(11,42,61,0.12);
+  box-shadow:0 18px 45px rgba(0,0,0,0.06);
+}
+
+.page-wrap .page-section:not(.dark) .vision-card .vision-title{
+  color:#071426;
+}
+
+.page-wrap .page-section:not(.dark) .vision-list li{
+  color:rgba(11,42,61,0.85);
+}
+
+/* ==============================
+   Value Chips
+============================== */
+.page-wrap .page-section:not(.dark) .value-chip{
+  background:rgba(245,196,0,0.12);
+  color:#0b2a3d;
+  border:1px solid rgba(245,196,0,0.35);
+}
+
+/* ==============================
+   Buttons on Light Sections
+============================== */
+.page-wrap .page-section:not(.dark) .btn-outline-custom{
+  color:#0b2a3d !important;
+  border-color:#f5c400;
+}
+
+.page-wrap .page-section:not(.dark) .btn-outline-custom:hover{
+  background:#f5c400;
+  color:#071426 !important;
+}
+
+/* ==============================
+   Breadcrumb Fix
+============================== */
+.page-hero .breadcrumb-lite a,
+.page-hero .breadcrumb-lite span{
+  color:#ffffff;
+  opacity:0.9;
+}
+
+/* ==============================
+   Hero text contrast
+============================== */
+.page-hero-content h1,
+.page-hero-content p,
+.page-hero-content .kicker{
+  color:#ffffff;
+}
+/* CTA Light Text */
+h2.cta-title-light{
+  color:#f5f7fa !important;
+}
+
+p.pro{
+  color:rgba(245,247,250,0.85) !important;
+}
+/* Gold Kicker – Luxury Style */
+.kicker-gold{
+  color: #f5c400   !important;       /* أصفر دهبي */
+  font-family: 'Aref Ruqaa', serif; /* خط رقعة */
+  font-size: 24px !important;                /* كبير وواضح */
+  font-style: italic;             /* مائل */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+/* White Outline Button */
+.btn-outline-white{
+  color: #ffffff !important;
+  border: 2px solid #ffffff;
+  background: transparent;
+}
+
+/* Hover effect */
+.btn-outline-white:hover{
+  background: #ffffff;
+  color: #0b2a3a !important; /* كحلي غامق يليق بالموقع */
+}
+/* White outline button (Arabic & English) */
+.btn-outline-white{
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  background: transparent !important;
+}
+
+/* Hover */
+.btn-outline-white:hover{
+  background: #ffffff !important;
+  color: #0b2a3a !important; /* كحلي غامق يليق بالهوية */
+}
+/* ===== White Buttons ===== */
+.btn-white{
+  background: #ffffff !important;
+  color: #0b2a3a !important; /* كحلي غامق */
+  border: 2px solid #ffffff !important;
+}
+
+/* Hover effect */
+.btn-white:hover{
+  background: transparent !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+/* White WhatsApp Button */
+.btn-white{
+  background:#ffffff !important;
+  color:#0b2a3a !important; /* كحلي غامق */
+  border:2px solid #ffffff !important;
+}
+
+.btn-white:hover{
+  background:transparent !important;
+  color:#ffffff !important;
+  border-color:#ffffff !important;
+}
+/* Navbar link underline hover */
+.nav-links li a{
+  position: relative;
+  padding-bottom: 6px;
+}
+
+/* الخط الأصفر */
+.nav-links li a::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d4af37; /* دهبي / أصفر فخم */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* عند الهوفر */
+.nav-links li a:hover::after{
+  width: 100%;
 }

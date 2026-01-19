@@ -154,18 +154,106 @@ const $$ = (sel) => document.querySelectorAll(sel);
   });
 })();
 
-// ============ Reveal on Scroll (optional if you use .reveal) ============
+
+// ============ Luxury Scroll Reveal (side fade-in) ============
 (() => {
-  const reveals = $$(".reveal");
-  if (!reveals.length) return;
+  const isRTL = (document.documentElement.getAttribute("dir") || "").toLowerCase() === "rtl";
 
-  const onScrollReveal = () => {
-    reveals.forEach((el) => {
-      const top = el.getBoundingClientRect().top;
-      if (top < window.innerHeight - 120) el.classList.add("show");
+  // Auto-mark sections (except hero) for reveal if they aren't already
+  const sections = document.querySelectorAll("section:not(.hero)");
+  let sIndex = 0;
+  sections.forEach((sec) => {
+    // avoid revealing tiny utility sections if needed
+    if (!sec.classList.contains("reveal") && !sec.closest(".no-reveal")) {
+      sec.classList.add("reveal");
+    }
+
+    // assign direction only if not specified
+    if (!sec.classList.contains("reveal-left") && !sec.classList.contains("reveal-right") && !sec.classList.contains("reveal-up")) {
+      const even = sIndex % 2 === 0;
+      sec.classList.add(even ? (isRTL ? "reveal-right" : "reveal-left") : (isRTL ? "reveal-left" : "reveal-right"));
+      sIndex++;
+    }
+  });
+
+  // Stagger: animate direct children smoothly
+  document.querySelectorAll(".stagger").forEach((wrap) => {
+    const children = Array.from(wrap.children);
+    children.forEach((ch, i) => {
+      // keep original if already visible / special
+      ch.style.transitionDelay = `${Math.min(i * 90, 420)}ms`;
     });
-  };
+  });
 
-  window.addEventListener("scroll", onScrollReveal);
-  onScrollReveal();
+  const targets = document.querySelectorAll(".reveal, .stagger");
+  if (!targets.length) return;
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-visible");
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -12% 0px" }
+  );
+
+  targets.forEach((el) => io.observe(el));
+})();
+
+// ============ Active Nav Link (by current page) ============
+(function(){
+  const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  const links = document.querySelectorAll(".nav-links a");
+
+  links.forEach(a => {
+    const href = (a.getAttribute("href") || "").toLowerCase();
+    // لو اللينك ملف صفحة
+    if(href && !href.startsWith("#") && href === path){
+      a.classList.add("active");
+    }
+  });
+})();
+
+// ============ Smart Language Switch (page-to-page) ============
+(function(){
+  const langBtn = document.querySelector(".lang-switch");
+  if(!langBtn) return;
+
+  const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+
+  // لو عربي -> روح لنفس الصفحة -en
+  // لو إنجليزي -> ارجع لنفس الصفحة بدون -en
+  const isEn = current.includes("-en");
+  let target;
+
+  if(isEn){
+    target = current.replace("-en", "");
+  }else{
+    const dot = current.lastIndexOf(".");
+    target = dot > -1 ? current.slice(0, dot) + "-en" + current.slice(dot) : current + "-en";
+  }
+
+  langBtn.setAttribute("href", target);
+})();
+
+// ============ Element-only reveal on scroll ============
+(function(){
+  const els = document.querySelectorAll(".reveal-text, .reveal-item, .reveal-left, .reveal-right");
+  if(!els.length) return;
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("reveal-in");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.18 });
+
+  els.forEach((el)=>{
+    io.observe(el);
+  });
 })();

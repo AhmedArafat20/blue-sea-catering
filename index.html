@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" translate="no">
-
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="images/logo.jpeg">
   <meta name="google" content="notranslate">
-<meta http-equiv="Content-Language" content="ar">
-
-  <title>Blue Sea Catering - البحر الازرق للتموين والاعاشه</title>
+  <meta http-equiv="Content-Language" content="ar">
+  <title>Blue Sea Catering - البحر الأزرق للتموين والإعاشة</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Bootstrap RTL -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
-    rel="stylesheet"
-  />
+  <!-- Ruqaa for kicker -->
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Google Font Arabic -->
+  <!-- Bootstrap RTL -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet"/>
+
+  <!-- Cairo -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<!-- Navbar -->
+
 <!-- Navbar -->
 <nav class="navbar-custom">
   <div class="container">
@@ -34,92 +33,97 @@
       </div>
 
       <ul class="nav-links">
-        <!-- Mobile Head -->
         <li class="nav-mobile-head">
           <div class="nav-mobile-brand">
             <img src="images/logo4.png" alt="Blue Sea">
             <span>Blue Sea Catering</span>
           </div>
-
           <button class="menu-close" type="button" aria-label="Close Menu">✕</button>
         </li>
 
-        <li><a href="#hero">الرئيسية</a></li>
-        <li><a href="#story">من نحن</a></li>
-        <li><a href="#services">خدماتنا</a></li>
-        <li><a href="#projects">مشاريعنا</a></li>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="projects.html">مشاريعنا</a></li>
         <li><a href="#partners">شركاء النجاح</a></li>
-        <li><a href="#contact">تواصل معنا</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
       </ul>
 
       <div class="nav-actions">
         <a href="index-en.html" class="lang-switch">EN</a>
-
-        <button class="menu-toggle" type="button" aria-label="Open Menu">
-          ☰
-        </button>
+        <button class="menu-toggle" type="button" aria-label="Open Menu">☰</button>
       </div>
 
     </div>
   </div>
 
-  <!-- Overlay -->
   <div class="nav-overlay"></div>
 </nav>
 
-
-
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-overlay"></div>
+<!-- HERO -->
+<header id="hero" class="page-hero home-hero">
+  <div class="hero-bg" style="background-image:url('images/hero.png')"></div>
 
   <div class="container">
-    <div class="hero-content">
-      <h1>
-        خدمات إعاشة وتموين  
-        <span>بمعايير عالمية</span>
+    <div class="page-hero-content">
+
+      <div class="kicker kicker-gold reveal-text reveal-d1">
+        مرحبًا بك في بلو سي كاترينج
+      </div>
+
+      <h1 class="reveal-text reveal-d2">
+        خدمات تموين وإعاشة متكاملة
+        <span style="color: var(--secondary)">مصممة للمشاريع الكبرى</span>
       </h1>
 
-      <p>
-        بلو سي كاترينج هي الامتداد الاستراتيجي لمجموعة المزروعي،
-        نقدم حلول إعاشة متكاملة بمعايير عالية من الجودة والسلامة
-        لتلبية احتياجات القطاعات المختلفة داخل المملكة العربية السعودية.
+      <p class="reveal-text reveal-d3">
+        بلو سي كاترينج هي الامتداد الاستراتيجي لمجموعة المزروعي.
+        نقدم حلول تموين وإعاشة ودعم تشغيلي بمعايير صارمة من الجودة وسلامة الغذاء داخل المملكة العربية السعودية،
+        لتناسب المشاريع التي تتطلب جاهزية تشغيلية، ثبات في الخدمة، واحترافية في التنفيذ.
       </p>
 
-      <div class="hero-buttons">
-        <a href="#services" class="btn btn-primary-custom">
-          خدماتنا
-        </a>
-        <a href="#contact" class="btn btn-outline-custom">
-          تواصل معنا
-        </a>
+      <div class="hero-buttons" style="justify-content:center">
+        <a href="services.html" class="btn btn-primary-custom reveal-item reveal-d3">خدماتنا</a>
+        <a href="contact.html" class="btn c1 btn-outline-custom reveal-item reveal-d4">تواصل معنا</a>
       </div>
+
+      <div class="hero-badges reveal-item reveal-d4"
+           style="margin-top:18px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+        <span class="highlight-pill">جاهزية تشغيلية</span>
+        <span class="highlight-pill">جودة وسلامة</span>
+        <span class="highlight-pill">دعم المواقع النائية</span>
+        <span class="highlight-pill">حلول مخصصة</span>
+      </div>
+
     </div>
   </div>
-</section>
+
+  <svg class="hero-curve" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,64 C240,140 520,140 720,96 C920,52 1160,0 1440,60 L1440,160 L0,160 Z"></path>
+  </svg>
+</header>
+
 <!-- Our Story -->
-<!-- Our Story - New Design -->
-<section id="story" class="story-modern">
+<section id="story" class="story-modern stagger">
   <div class="container">
     <div class="row align-items-center">
 
       <div class="col-lg-6 story-text">
-        <span class="story-label">قصتنا</span>
-        <h2>
-          امتداد استراتيجي  
+        <span class="story-label reveal-text">قصتنا</span>
+        <h2 class="reveal-text">
+          امتداد استراتيجي
           <br>
           بخبرة إقليمية
         </h2>
 
-        <p>
-          بلو سي كاترينج هي الامتداد الاستراتيجي لمجموعة المزروعي للتموين،
-          حيث نوسع خبرتنا الإقليمية لنقدم حلول إعاشة متكاملة داخل
-          المملكة العربية السعودية، مع الالتزام بأعلى معايير الجودة
-          والسلامة.
+        <p class="reveal-text">
+          تعتمد بلو سي كاترينج على خبرة مجموعة المزروعي الإقليمية الممتدة،
+          وتوسع حضورها داخل المملكة العربية السعودية لتقديم حلول إعاشة متكاملة.
+          نعمل وفق أعلى معايير السلامة والجودة وثبات الخدمة، مع تخصيص كامل لكل مشروع حسب احتياجاته.
         </p>
       </div>
 
-      <div class="col-lg-6 story-image">
+      <div class="col-lg-6 story-image reveal-left">
         <img src="images/img1.jpg" alt="Our Story">
       </div>
 
@@ -130,23 +134,20 @@
 <!-- Vision & Values -->
 <section id="vision" class="vision-modern">
   <div class="container">
-
-    <div class="section-header text-center reveal">
-      <span class="section-label">رؤيتنا وقيمنا</span>
-      <h2 class="section-title-light">رؤية واضحة وقيم راسخة</h2>
-      <p class="section-desc">
-        نعمل على تقديم خدمات إعاشة وإدارة مرافق بمعايير عالية من الجودة والابتكار
-        والاستدامة، بما يواكب تطلعات السوق ويسهم في تحقيق مستهدفات رؤية المملكة 2030.
+    <div class="section-header text-center">
+      <span class="section-label reveal-text">رؤيتنا وقيمنا</span>
+      <h2 class="section-title-light reveal-text">رؤية واضحة. قيم راسخة.</h2>
+      <p class="section-desc reveal-text">
+        نقدم خدمات الإعاشة والتشغيل بمعايير عالية، مع التركيز على الابتكار والاستدامة والجودة المستمرة،
+        بما يواكب احتياجات السوق ويسهم في تحقيق مستهدفات رؤية المملكة 2030.
       </p>
     </div>
 
     <div class="row g-2 align-items-stretch">
 
-      <!-- Vision -->
       <div class="col-12 col-lg-6">
-        <div class="vision-card reveal">
+        <div class="vision-card reveal-right">
           <div class="vision-head">
-            <!-- <div class="vision-badge">04</div> -->
             <div>
               <h3 class="vision-title">رؤيتنا</h3>
               <p class="vision-sub">
@@ -164,31 +165,25 @@
             <li>إجراءات تدقيق ذاتي صارمة</li>
             <li>تطبيق الإجراءات التصحيحية المستمرة</li>
             <li>التقييمات والمراجعات الخارجية</li>
-            <li>الالتزام التام بنظام إدارة جودة معتمد ورسمي</li>
+            <li>الالتزام بأنظمة إدارة الجودة المعتمدة</li>
           </ul>
 
           <div class="vision-note">
             <strong>التوافق مع رؤية 2030:</strong>
-            نساهم بشكل فعّال في تحسين جودة الحياة، دعم التنويع الاقتصادي،
-            وتطوير الكفاءات والمواهب الوطنية.
+            نساهم في تحسين جودة الحياة، دعم التنويع الاقتصادي، وتطوير المواهب الوطنية.
           </div>
         </div>
       </div>
 
-      <!-- Values & Satisfaction -->
       <div class="col-12 col-lg-6">
-        <div >
+        <div>
 
-          <!-- Core Values -->
           <div class="col-12">
-            <div class="values-card reveal">
+            <div class="values-card reveal-left">
               <div class="values-head">
-                <!-- <div class="values-badge">04</div> -->
                 <div>
                   <h3 class="values-title">قيمنا الأساسية</h3>
-                  <p class="values-sub">
-                    مبادئ نلتزم بها في جميع تعاملاتنا وشراكاتنا.
-                  </p>
+                  <p class="values-sub">مبادئ نطبقها في كل خدمة وشراكة.</p>
                 </div>
               </div>
 
@@ -201,20 +196,18 @@
             </div>
           </div>
 
-          <!-- Customer Satisfaction -->
           <div class="col-12">
-            <div class="satisfaction-card reveal">
+            <div class="satisfaction-card reveal-left">
               <h3 class="satisfaction-title">رضا العملاء</h3>
               <p class="satisfaction-text">
-                رضا عملائنا هو جوهر كل ما نقوم به. نحرص على تقديم خدمات مخصصة،
-                والتواصل المستمر، والالتزام بالجودة العالية، واحترام الجداول الزمنية،
-                مع التطوير المستمر لخدماتنا. ومن خلال الاستماع لملاحظات عملائنا
-                وتلبية احتياجاتهم بدقة، بنينا علاقات قوية وسمعة متميزة في القطاع.
+                رضا العملاء هو محور عملنا. نقدم حلولًا مخصصة، وتواصلًا مستمرًا،
+                مع الالتزام بالجودة والجدولة الزمنية. ومن خلال الاستماع والتحسين المتواصل،
+                نبني علاقات طويلة الأمد مبنية على الثقة.
               </p>
 
               <div class="satisfaction-highlights">
                 <span class="highlight-pill">خدمة مخصصة</span>
-                <span class="highlight-pill">تواصل فعّال</span>
+                <span class="highlight-pill">تواصل واضح</span>
                 <span class="highlight-pill">التزام بالمواعيد</span>
                 <span class="highlight-pill">تحسين مستمر</span>
               </div>
@@ -228,160 +221,78 @@
   </div>
 </section>
 
-
-
+<!-- Services -->
 <section id="services" class="services-modern">
   <div class="container">
 
     <div class="section-header text-center">
-      <span class="section-label">خدماتنا</span>
-      <h2 class="section-title-light">
-        حلول إعاشة متكاملة
-      </h2>
+      <span class="section-label reveal-text">خدماتنا</span>
+      <h2 class="section-title-light reveal-text">حلول إعاشة متكاملة</h2>
     </div>
 
-    <div class="services-grid">
+    <div class="services-grid stagger">
 
-      <!-- Industrial -->
-      <div class="service-item" data-target="industrial">
+      <div class="service-item premium-card reveal-left">
         <img src="images/img6.jpg" alt="">
         <div class="service-overlay">
           <h3>الإعاشة الصناعية والبرية والبحرية</h3>
-          <p>حلول متكاملة للمواقع الصناعية والمناطق النائية.</p>
-          <span class="service-more">عرض التفاصيل</span>
+          <p>حلول موثوقة للمواقع الصناعية والمناطق النائية.</p>
         </div>
       </div>
 
-      <!-- Corporate -->
-      <div class="service-item" data-target="corporate">
+      <div class="service-item premium-card reveal-left">
         <img src="images/img7.jpg" alt="">
         <div class="service-overlay">
           <h3>إعاشة الشركات والفعاليات</h3>
-          <p>حلول مرنة لبيئات العمل والفعاليات الخاصة.</p>
-          <span class="service-more">عرض التفاصيل</span>
+          <p>خدمات مرنة للمكاتب والفعاليات والضيافة الراقية.</p>
         </div>
       </div>
 
-      <!-- Camps -->
-      <div class="service-item" data-target="camp">
+      <div class="service-item premium-card reveal-left">
         <img src="images/img8.jpg" alt="">
         <div class="service-overlay">
           <h3>إدارة المعسكرات</h3>
-          <p>إنشاء وإدارة معسكرات سكنية متكاملة.</p>
-          <span class="service-more">عرض التفاصيل</span>
+          <p>تشغيل كامل للمعسكرات ودعم الخدمات اليومية.</p>
         </div>
       </div>
 
-      <!-- Remote -->
-      <div class="service-item" data-target="remote">
+      <div class="service-item premium-card reveal-left">
         <img src="images/img9.jpg" alt="">
         <div class="service-overlay">
-          <h3>المواقع الصحراوية والنائية</h3>
-          <p>خدمات إعاشة ودعم لوجستي للمناطق الصعبة.</p>
-          <span class="service-more">عرض التفاصيل</span>
+          <h3>دعم المواقع الصحراوية والنائية</h3>
+          <p>إعاشة ودعم لوجستي للبيئات الصعبة.</p>
         </div>
       </div>
 
     </div>
+
+    <div class="text-center mt-5 reveal-item">
+      <a href="services.html" class="btn c1 btn-outline-custom">مشاهدة جميع خدماتنا</a>
+    </div>
+
   </div>
 </section>
-<!-- Service Details -->
-<div class="service-details">
 
-  <!-- Industrial -->
-  <div id="industrial" class="service-detail">
-    <h3>الإعاشة الصناعية والبرية والبحرية</h3>
-    <p>
-      نقدم وجبات غذائية عالية الجودة للعاملين في المواقع الصناعية
-      والمناطق المعزولة، مع ضمان كفاءة التشغيل واستمرارية الخدمة.
-    </p>
-
-    <ul>
-      <li>حلول إعاشة متكاملة داخل المواقع</li>
-      <li>تجهيز المطابخ والمرافق الغذائية</li>
-      <li>خدمات غسيل الملابس (Laundry Services)</li>
-      <li>خدمات النظافة والتدبير المنزلي</li>
-      <li>تحريك وتجهيز وحدات السكن والمطابخ</li>
-      <li>سكن الموظفين (Senior & Junior Staff)</li>
-      <li>تصميم وتجهيز المطابخ والمطاعم</li>
-    </ul>
-  </div>
-
-  <!-- Corporate -->
-  <div id="corporate" class="service-detail">
-    <h3>إعاشة الشركات والفعاليات الخاصة</h3>
-    <p>
-      نصمم حلول إعاشة مخصصة للشركات والمؤسسات
-      تساهم في تحسين بيئة العمل وزيادة الإنتاجية.
-    </p>
-
-    <ul>
-      <li>كافتيريات الشركات (Indoor / Outdoor)</li>
-      <li>وجبات مكتبية وبوفيهات</li>
-      <li>استقبالات وحفلات الشركات</li>
-      <li>حفلات العشاء والمؤتمرات</li>
-      <li>حفلات الزفاف والمناسبات الخاصة</li>
-      <li>الرحلات وحفلات الشواء</li>
-    </ul>
-  </div>
-
-  <!-- Camps -->
-  <div id="camp" class="service-detail">
-    <h3>إنشاء وإدارة المعسكرات</h3>
-    <p>
-      نوفر حلولًا متكاملة لإنشاء وإدارة المعسكرات
-      السكنية المؤقتة والدائمة حسب طبيعة المشروع.
-    </p>
-
-    <ul>
-      <li>إدارة الإعاشة والسكن</li>
-      <li>النظافة العامة والتدبير المنزلي</li>
-      <li>الخدمات الترفيهية</li>
-      <li>غسيل الملابس</li>
-      <li>الأمن، العيادات، والنقل</li>
-      <li>دعم تشغيلي 12 / 24 ساعة</li>
-    </ul>
-  </div>
-
-  <!-- Remote -->
-  <div id="remote" class="service-detail">
-    <h3>الإعاشة في المواقع الصحراوية والنائية</h3>
-    <p>
-      نقدم خدمات إعاشة ودعم لوجستي متكاملة
-      للمشاريع في المناطق الصحراوية والنائية.
-    </p>
-
-    <ul>
-      <li>بنية تحتية مصممة خصيصًا للمواقع النائية</li>
-      <li>إدارة الإعاشة والدعم اللوجستي</li>
-      <li>استمرارية الخدمة في البيئات الصعبة</li>
-      <li>تجارة وتوريد المواد الغذائية</li>
-    </ul>
-  </div>
-
-</div>
-
-
+<!-- Why Us -->
 <section class="why-us">
   <div class="container">
     <div class="row">
 
       <div class="col-lg-6">
-        <h2>لماذا بلو سي كاترينج؟</h2>
-        <p>
-          نؤمن أن تقديم خدمات الإعاشة لا يقتصر فقط على الطعام،
-          بل يشمل الجودة، السلامة، الالتزام، وفهم طبيعة كل مشروع.
-          لهذا نعمل كشريك استراتيجي لعملائنا وليس مجرد مزود خدمة.
+        <h2 class="reveal-text">لماذا بلو سي كاترينج؟</h2>
+        <p class="reveal-text">
+          الإعاشة ليست طعامًا فقط، بل ثبات جودة وسلامة وجاهزية تشغيلية.
+          نعمل كشريك استراتيجي مع كل عميل لضمان تنفيذ احترافي يناسب طبيعة المشروع.
         </p>
       </div>
 
       <div class="col-lg-6">
-        <ul class="why-list">
+        <ul class="why-list reveal-left">
           <li>خبرة إقليمية ممتدة عبر عدة دول</li>
-          <li>أنظمة صارمة للجودة والسلامة الغذائية</li>
-          <li>مرونة تشغيلية تلائم طبيعة المشاريع الكبرى</li>
-          <li>فرق عمل مدربة ومؤهلة</li>
-          <li>قدرة على العمل في البيئات الصعبة والنائية</li>
+          <li>معايير صارمة للجودة وسلامة الغذاء</li>
+          <li>مرونة تشغيلية للمشاريع الكبرى</li>
+          <li>فرق مدربة واحترافية</li>
+          <li>جاهزية للمواقع النائية والبيئات الصعبة</li>
         </ul>
       </div>
 
@@ -389,56 +300,52 @@
   </div>
 </section>
 
-
+<!-- CTA -->
 <section class="cta">
   <div class="container text-center">
-    <h2>جاهزون لتقديم حل إعاشة يناسب مشروعك</h2>
-    <p>
-      تواصل معنا اليوم ودعنا نساعدك في إدارة خدمات الإعاشة
-      بأعلى معايير الجودة والاحترافية.
+    <h2 class="reveal-text">جاهزون لدعم مشروعك بخدمات إعاشة راقية؟</h2>
+    <p class="reveal-text">
+      تواصل معنا اليوم ودعنا نناقش الحل الأنسب لخدمات الإعاشة والتشغيل حسب احتياجك.
     </p>
-    <a href="#contact" class="btn btn-primary-custom">
-      تواصل معنا
-    </a>
+    <a href="contact.html" class="btn btn-primary-custom reveal-item">تواصل الآن</a>
   </div>
 </section>
 
+<!-- Safety -->
 <section id="safety" class="safety-modern">
   <div class="container">
     <div class="row align-items-center g-2">
 
       <div class="col-lg-6">
-        <span class="section-label">الصحة والسلامة</span>
-        <h2 class="section-title-light">التزام صارم بمعايير الجودة والسلامة</h2>
-        <p class="section-text-light">
-          نطبّق نظامًا واضحًا لإدارة سلامة الغذاء وجودة التشغيل، بدءًا من اختيار الموردين
-          وحتى التسليم النهائي في مواقع العمل. هدفنا تقديم تجربة إعاشة آمنة، ثابتة الجودة،
-          وقابلة للتوسع حسب حجم المشروع وطبيعته.
+        <span class="section-label reveal-text">الجودة والسلامة</span>
+        <h2 class="section-title-light reveal-text">التزام صارم بمعايير الجودة</h2>
+        <p class="section-text-light reveal-text">
+          نطبق نظامًا واضحًا لإدارة سلامة الغذاء وجودة التشغيل—from الموردين وحتى التسليم بالموقع.
+          هدفنا تقديم خدمة آمنة وثابتة وقابلة للتوسع.
         </p>
 
         <div class="safety-points edge-mobile">
-
-          <div class="safety-point">
+          <div class="safety-point reveal-left">
             <h4>سلامة الغذاء</h4>
-            <p>ممارسات دقيقة للتعامل والتخزين والتحضير لمنع التلوث وضمان جودة المكونات.</p>
+            <p>إجراءات دقيقة للتعامل والتخزين والتحضير لمنع التلوث.</p>
           </div>
-          <div class="safety-point">
-            <h4>النظافة الشخصية والمهنية</h4>
-            <p>التزام كامل بإجراءات النظافة، معدات الوقاية، ومناطق عمل نظيفة ومنظمة.</p>
+          <div class="safety-point reveal-left">
+            <h4>النظافة الشخصية وبيئة العمل</h4>
+            <p>التزام كامل بإجراءات النظافة ومناطق عمل منظمة.</p>
           </div>
-          <div class="safety-point">
-            <h4>مراقبة الحرارة والنقل</h4>
-            <p>ضبط درجات الحرارة أثناء التحضير والتخزين والنقل وفق إجراءات تشغيل قياسية.</p>
+          <div class="safety-point reveal-left">
+            <h4>التحكم في درجات الحرارة والنقل</h4>
+            <p>إجراءات تشغيل قياسية للتحضير والتخزين والتسليم.</p>
           </div>
-          <div class="safety-point">
-            <h4>التدريب والتقييم المستمر</h4>
-            <p>تدريب دوري للفرق وعمليات تدقيق منتظمة لضمان التحسين المستمر والامتثال.</p>
+          <div class="safety-point reveal-left">
+            <h4>التدريب والتدقيق المستمر</h4>
+            <p>تدريب دوري وتدقيقات متكررة لضمان الامتثال والتحسين.</p>
           </div>
         </div>
       </div>
 
       <div class="col-lg-6">
-        <div class="safety-image-wrap">
+        <div class="safety-image-wrap reveal-right">
           <img src="images/img16.jpg" alt="Health & Safety">
           <div class="safety-badge">
             <span>Quality</span>
@@ -451,32 +358,28 @@
   </div>
 </section>
 
-<!-- Projects Section -->
+<!-- Projects -->
 <section id="projects" class="projects-modern">
   <div class="container">
 
-    <!-- Header -->
     <div class="projects-head">
       <div>
-        <span class="section-label">مشاريعنا</span>
-        <h2 class="section-title">سجل مشاريع يثبت خبرتنا</h2>
-        <p class="section-desc">
-          نفخر بتنفيذ وتشغيل مشاريع إعاشة وخدمات تشغيلية
-          في قطاعات متعددة داخل وخارج المملكة.
+        <span class="section-label reveal-text">مشاريعنا</span>
+        <h2 class="section-title reveal-text">سجل مشاريع يثبت خبرتنا</h2>
+        <p class="section-desc reveal-text">
+          نفخر بتنفيذ وتشغيل مشاريع إعاشة وخدمات تشغيلية في قطاعات متعددة داخل وخارج المملكة.
         </p>
       </div>
 
-      <!-- Tabs -->
-      <div class="projects-tabs">
-        <button class="tab-btn active" data-tab="completed">مشاريع مكتملة</button>
-        <button class="tab-btn" data-tab="running">مشاريع قائمة</button>
+      <div class="projects-tabs reveal-item">
+        <button class="tab-btn active" data-tab="completed">مكتملة</button>
+        <button class="tab-btn" data-tab="running">قائمة</button>
       </div>
     </div>
 
-    <!-- Completed Projects (Images) -->
     <div class="tab-content active" id="completed">
       <div class="projects-grid">
-        <div class="project-card">
+        <div class="project-card reveal-left">
           <img src="images/img11.jpg" alt="">
           <div class="project-info">
             <span class="project-tag">Completed</span>
@@ -485,7 +388,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card reveal-left">
           <img src="images/img12.jpg" alt="">
           <div class="project-info">
             <span class="project-tag">Completed</span>
@@ -494,7 +397,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card reveal-left">
           <img src="images/img13.jpg" alt="">
           <div class="project-info">
             <span class="project-tag">Completed</span>
@@ -505,10 +408,9 @@
       </div>
     </div>
 
-    <!-- Running Projects (Images) -->
     <div class="tab-content" id="running">
       <div class="projects-grid">
-        <div class="project-card">
+        <div class="project-card reveal-left">
           <img src="images/img14.jpg" alt="">
           <div class="project-info">
             <span class="project-tag running">Running</span>
@@ -517,7 +419,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card reveal-left">
           <img src="images/img15.jpg" alt="">
           <div class="project-info">
             <span class="project-tag running">Running</span>
@@ -528,148 +430,96 @@
       </div>
     </div>
 
-    <!-- Accordion Lists -->
-    <div class="projects-accordion">
-
-      <!-- Completed List -->
-      <div class="acc-item">
-        <button type="button" class="acc-btn" data-acc="acc-completed">
-          عرض جميع المشاريع المكتملة
-          <span class="acc-icon">+</span>
-        </button>
-
-        <div class="acc-body" id="acc-completed">
-          <ul class="projects-names">
-            <li>Aseel Universal garment - Jordan</li>
-            <li>AMC-AZDA JV Catering - Dammam, KSA</li>
-            <li>Metro VFR Limited - Dubai</li>
-            <li>Salini Construttori - Dubai</li>
-            <li>Todini Costruzioni Generali - Dubai</li>
-            <li>Belleli Energy - Sharjah</li>
-            <li>Dubai Polo Club - Dubai</li>
-            <li>Dubai Precast - Dubai</li>
-            <li>Sendan Al Emarat - Dubai</li>
-            <li>Sharjah Airport Free Zone - Sharjah</li>
-            <li>Sungwon Corporation - Dubai</li>
-            <li>Arabtec Construction LLC - Dubai</li>
-            <li>Bhawan Engineering L.L.C - Dubai</li>
-            <li>Kele Contracting Co. LLC - Dubai</li>
-            <li>Dutco Beaty Balfour - Dubai</li>
-            <li>Meydan Racecourse - Dubai</li>
-            <li>Transgulf - UAE & KSA</li>
-            <li>Al Laith Scaffolding LLC</li>
-            <li>Green Works LLC - Dubai</li>
-            <li>Deco Emirates - Dubai</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Running List -->
-      <div class="acc-item">
-        <button type="button" class="acc-btn" data-acc="acc-running">
-          عرض جميع المشاريع القائمة
-          <span class="acc-icon">+</span>
-        </button>
-
-        <div class="acc-body" id="acc-running">
-          <ul class="projects-names">
-            <li>Elegancia MEP - Red Sea Project</li>
-            <li>Fast Construction - Red Sea Project</li>
-            <li>First Fix - Red Sea Project</li>
-          </ul>
-        </div>
-      </div>
-
+    <div class="text-center mt-5 reveal-item">
+      <a href="projects.html" class="btn btn-outline-custom">عرض جميع المشاريع</a>
     </div>
 
   </div>
 </section>
 
-
+<!-- Partners -->
 <section id="partners" class="partners-single">
   <div class="container">
-
-    <div class="section-header text-center reveal">
-      <span class="section-label">شركاء النجاح</span>
-      <h2 class="section-title">Our Success Partners</h2>
-      <p class="section-desc">
-        نفخر بثقة شركائنا واعتبارنا جزءًا من نجاح مشاريعهم،
-        ونسعى دائمًا لبناء علاقات طويلة الأمد قائمة على الجودة
-        والالتزام والاحترافية.
+    <div class="section-header text-center">
+      <span class="section-label reveal-text">شركاء النجاح</span>
+      <h2 class="section-title reveal-text">شركاؤنا في النجاح</h2>
+      <p class="section-desc reveal-text">
+        نفخر بثقة شركائنا، ونسعى لبناء علاقات طويلة الأمد قائمة على الجودة والالتزام والاحترافية.
       </p>
     </div>
 
-    <div class="partners-image-wrapper reveal">
-      <img src="images/partners.png" alt="Our Success Partners">
+    <div class="partners-image-wrapper reveal-item">
+      <img src="images/partners.png" alt="Partners">
     </div>
-
   </div>
 </section>
 
-
-
+<!-- Contact (No Email) -->
 <section id="contact" class="contact-modern">
   <div class="container">
     <div class="row g-3 align-items-start">
 
-      <!-- Left: Text + Cards -->
       <div class="col-12 col-lg-5">
-        <span class="section-label">تواصل معنا</span>
-        <h2 class="section-title-light">جاهزون لخدمتك</h2>
-        <p class="section-text-light">
-          اترك بياناتك وسنعود إليك سريعًا، أو تواصل معنا مباشرة عبر الهاتف والبريد الإلكتروني.
+        <span class="section-label reveal-text">تواصل معنا</span>
+        <h2 class="section-title-light reveal-text">جاهزون لخدمتك</h2>
+        <p class="section-text-light reveal-text">
+          شاركنا بياناتك وسنعود إليك سريعًا — أو تواصل معنا مباشرة عبر الهاتف أو واتساب.
         </p>
 
         <div class="contact-cards edge-mobile">
+          <div class="contact-card reveal-left">
+            <h4>الهاتف</h4>
+            <p><a href="tel:+966559361915" class="contact-link">0559361915</a></p>
+          </div>
 
-<div class="contact-card">
-  <h4>الهاتف</h4>
-  <p>
-    <a href="tel:+966559361915" class="contact-link">
-      0559361915
-    </a>
-  </p>
-</div>
+          <div class="contact-card reveal-left">
+            <h4>واتساب</h4>
+            <p><a href="https://wa.me/966559361915" target="_blank" rel="noopener" class="contact-link">بدء محادثة واتساب</a></p>
+          </div>
 
-<div class="contact-card">
-  <h4>البريد الإلكتروني</h4>
-  <p>
-    <a href="mailto:info@mcatering.com" class="contact-link">
-      info@mcatering.com
-    </a>
-  </p>
-</div>
-
-
-          <div class="contact-card">
+          <div class="contact-card reveal-left">
             <h4>العنوان</h4>
             <p>أملج، شارع عمر بن عبد العزيز، 48321</p>
+          </div>
+
+          <div class="contact-card reveal-left">
+            <h4>ساعات العمل</h4>
+            <p>الأحد – الخميس: 9:00 ص – 6:00 م</p>
           </div>
         </div>
       </div>
 
-      <!-- Right: Form -->
       <div class="col-12 col-lg-7">
-        <form class="contact-form">
+        <form class="contact-form reveal-item" id="contactFormAr">
           <div class="row g-3">
             <div class="col-md-6">
-              <input class="form-control" type="text" placeholder="الاسم" required>
+              <input class="form-control" type="text" placeholder="الاسم الكامل" required>
             </div>
 
             <div class="col-md-6">
-              <input class="form-control" type="text" placeholder="الشركة" required>
+              <input class="form-control" type="text" placeholder="اسم الشركة" required>
+            </div>
+
+            <div class="col-md-6">
+              <input class="form-control" type="tel" placeholder="رقم الجوال" required>
+            </div>
+
+            <div class="col-md-6">
+              <input class="form-control" type="text" placeholder="المدينة / موقع المشروع" required>
+            </div>
+
+            <div class="col-md-6">
+              <input class="form-control" type="text" placeholder="نوع الخدمة" required>
             </div>
 
             <div class="col-12">
-              <input class="form-control" type="email" placeholder="البريد الإلكتروني" required>
+              <textarea class="form-control" rows="6" placeholder="اكتب رسالتك... (مدة المشروع، العدد التقريبي، المتطلبات)" required></textarea>
             </div>
 
             <div class="col-12">
-              <textarea class="form-control" rows="6" placeholder="اكتب رسالتك..." required></textarea>
-            </div>
-
-            <div class="col-12">
-              <button class="btn btn-primary-custom w-100" type="submit">إرسال</button>
+              <button class="btn btn-primary-custom w-100" type="submit">
+                إرسال عبر واتساب
+              </button>
             </div>
           </div>
         </form>
@@ -679,28 +529,21 @@
   </div>
 </section>
 
-
-
+<!-- Footer -->
 <footer class="footer-modern">
   <div class="container">
-
     <div class="footer-top">
-      <!-- Brand -->
       <div class="footer-col">
         <h4 class="footer-title">Blue Sea Catering</h4>
         <p class="footer-text">
-          حلول إعاشة وتشغيل بمعايير جودة وسلامة عالية داخل المملكة، مع جاهزية تشغيلية
-          ومرونة تلائم المشاريع الكبرى والمواقع النائية.
+          حلول إعاشة وتشغيل بمعايير جودة وسلامة عالية، مع جاهزية للمشاريع الكبرى ودعم المواقع النائية داخل المملكة.
         </p>
       </div>
 
-
-      <!-- QR + Social -->
       <div class="footer-col">
         <h4 class="footer-title">تابعنا</h4>
 
         <div class="footer-qr">
-          <!-- غير المسار حسب مكان صورة الـ QR -->
           <img src="images/qrcode.png" alt="QR Code">
           <div class="footer-qr-text">
             <p class="footer-text" style="margin:0">
@@ -710,19 +553,15 @@
         </div>
 
         <div class="footer-social">
-          <!-- أنت هتجيب الايقونات كصور: حطها في images/social/ -->
           <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="Instagram">
             <img src="images/instagram.png" alt="Instagram">
           </a>
-
           <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
             <img src="images/linkedin.png" alt="LinkedIn">
           </a>
-
           <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="Facebook">
             <img src="images/facebook.png" alt="Facebook">
           </a>
-
           <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
             <img src="images/whatsapp.png" alt="WhatsApp">
           </a>
@@ -733,16 +572,44 @@
     <div class="footer-bottom">
       <span>© 2026 Blue Sea Catering. جميع الحقوق محفوظة.</span>
     </div>
-
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 
+<script>
+document.getElementById("contactFormAr").addEventListener("submit", function(e){
+  e.preventDefault();
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  const name = this.querySelector('input[placeholder="الاسم الكامل"]').value.trim();
+  const company = this.querySelector('input[placeholder="اسم الشركة"]').value.trim();
+  const phone = this.querySelector('input[placeholder="رقم الجوال"]').value.trim();
+  const city = this.querySelector('input[placeholder="المدينة / موقع المشروع"]').value.trim();
+  const service = this.querySelector('input[placeholder="نوع الخدمة"]').value.trim();
+  const msg = this.querySelector('textarea').value.trim();
 
-  <!-- Main JS -->
-  <script src="js/main.js"></script>
+  if(!service){
+    alert("من فضلك اكتب نوع الخدمة");
+    return;
+  }
+
+  const text =
+`طلب جديد - Blue Sea Catering
+
+الاسم: ${name}
+الشركة: ${company}
+الجوال: ${phone}
+نوع الخدمة: ${service}
+المدينة / الموقع: ${city}
+
+الرسالة:
+${msg}`;
+
+  const wa = "https://wa.me/966559361915?text=" + encodeURIComponent(text);
+  window.open(wa, "_blank");
+});
+</script>
+
 </body>
 </html>

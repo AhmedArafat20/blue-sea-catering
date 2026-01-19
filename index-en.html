@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" translate="no">
-
-
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="images/logo.jpeg">
-<meta name="google" content="notranslate">
-<meta http-equiv="Content-Language" content="en">
-
-  <title>Blue Sea Catering - البحر الازرق للتموين والاعاشه</title>
+  <meta name="google" content="notranslate">
+  <title>Blue Sea Catering - Premium Catering & Life Support</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap RTL -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
-    rel="stylesheet"
-  />
 
-  <!-- Google Font Arabic -->
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Font (same family) -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <!-- Navbar -->
+
+<!-- Navbar -->
 <nav class="navbar-custom">
   <div class="container">
     <div class="navbar-content">
@@ -40,83 +37,95 @@
             <img src="images/logo4.png" alt="Blue Sea">
             <span>Blue Sea Catering</span>
           </div>
-
           <button class="menu-close" type="button" aria-label="Close Menu">✕</button>
         </li>
 
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#story">About Us</a></li>
-        <li><a href="#services">Our Services</a></li>
-        <li><a href="#projects">Our Projects</a></li>
-        <li><a href="#partners">Success Partners</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="about-en.html">About</a></li>
+        <li><a href="services-en.html">Services</a></li>
+        <li><a href="projects-en.html">Projects</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="contact-en.html">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
         <a href="index.html" class="lang-switch">AR</a>
-
-        <button class="menu-toggle" type="button" aria-label="Open Menu">
-          ☰
-        </button>
+        <button class="menu-toggle" type="button" aria-label="Open Menu">☰</button>
       </div>
 
     </div>
   </div>
 
-  <!-- Overlay -->
   <div class="nav-overlay"></div>
 </nav>
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-overlay"></div>
+
+<!-- HERO (Wave like the first version) -->
+<header id="hero" class="page-hero home-hero">
+  <!-- IMPORTANT: this is your hero image path -->
+  <div class="hero-bg" style="background-image:url('images/hero.png')"></div>
 
   <div class="container">
-    <div class="hero-content">
-      <h1>
-        Catering & Hospitality Services  
-        <span>With International Standards</span>
+    <div class="page-hero-content">
+      <div class="kicker kicker-gold reveal-text reveal-d1">
+  Welcome to Blue Sea Catering
+</div>
+
+
+      <h1 class="reveal-text reveal-d2">
+        Integrated Catering & Life Support
+        <span style="color: var(--secondary)">Built for Large-Scale Operations</span>
       </h1>
 
-      <p>
+      <p class="reveal-text reveal-d3">
         Blue Sea Catering is the strategic extension of Al Mazroui Group.
-        We provide integrated catering solutions with high standards of
-        quality and safety to meet the needs of various sectors across
-        the Kingdom of Saudi Arabia.
+        We deliver reliable catering and life support services with strict quality and
+        food safety standards across the Kingdom of Saudi Arabia—designed for projects
+        that demand consistency, readiness, and operational excellence.
       </p>
 
-      <div class="hero-buttons">
-        <a href="#services" class="btn btn-primary-custom">
-          Our Services
-        </a>
-        <a href="#contact" class="btn btn-outline-custom">
-          Contact Us
-        </a>
+      <div class="hero-buttons" style="justify-content:center">
+        <a href="services-en.html" class="btn btn-primary-custom reveal-item reveal-d3">Our Services</a>
+        <a href="contact-en.html" class="btn c1 btn-outline-custom reveal-item reveal-d4">Contact</a>
+      </div>
+
+      <div class="hero-badges reveal-item reveal-d4"
+           style="margin-top:18px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+        <span class="highlight-pill">Operational Readiness</span>
+        <span class="highlight-pill">Quality & Safety</span>
+        <span class="highlight-pill">Remote Site Support</span>
+        <span class="highlight-pill">Tailored Solutions</span>
       </div>
     </div>
   </div>
-</section>
-<!-- Our Story - New Design -->
-<section id="story" class="story-modern">
+
+  <!-- WAVE CUT (white like the first version) -->
+  <svg class="hero-curve" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,64 C240,140 520,140 720,96 C920,52 1160,0 1440,60 L1440,160 L0,160 Z"></path>
+  </svg>
+</header>
+
+<!-- Our Story -->
+<section id="story" class="story-modern stagger">
   <div class="container">
     <div class="row align-items-center">
 
       <div class="col-lg-6 story-text">
-        <span class="story-label">Our Story</span>
-        <h2>
-          Strategic Extension  
+        <span class="story-label reveal-text">Our Story</span>
+        <h2 class="reveal-text">
+          A Strategic Extension
           <br>
           With Regional Expertise
         </h2>
 
-        <p>
-          Blue Sea Catering is the strategic extension of Al Mazroui Catering Group,
-          expanding our regional expertise to deliver integrated catering solutions
-          across the Kingdom of Saudi Arabia, while maintaining the highest standards
-          of quality and safety.
+        <p class="reveal-text">
+          Blue Sea Catering builds on the proven regional experience of Al Mazroui Group,
+          expanding into Saudi Arabia to deliver integrated catering and life support
+          solutions. We operate with high standards of safety, consistency, and service
+          excellence—adapted to the unique needs of each project.
         </p>
       </div>
 
-      <div class="col-lg-6 story-image">
+      <div class="col-lg-6 story-image reveal-left">
         <img src="images/img1.jpg" alt="Our Story">
       </div>
 
@@ -127,30 +136,25 @@
 <!-- Vision & Values -->
 <section id="vision" class="vision-modern">
   <div class="container">
-
-    <div class="section-header text-center reveal">
-      <span class="section-label">Our Vision & Values</span>
-      <h2 class="section-title-light">A Clear Vision and Strong Values</h2>
-      <p class="section-desc">
-        We are committed to delivering catering and facility management services
-        with high standards of quality, innovation, and sustainability,
-        aligned with market expectations and the goals of Saudi Vision 2030.
+    <div class="section-header text-center">
+      <span class="section-label reveal-text">Vision & Values</span>
+      <h2 class="section-title-light reveal-text">Clear Vision. Strong Values.</h2>
+      <p class="section-desc reveal-text">
+        We deliver catering and facility operations with a focus on innovation, sustainability,
+        and consistent quality—aligned with evolving market needs and the ambitions of Saudi Vision 2030.
       </p>
     </div>
 
     <div class="row g-2 align-items-stretch">
 
-      <!-- Vision -->
       <div class="col-12 col-lg-6">
-        <div class="vision-card reveal">
+        <div class="vision-card reveal-right">
           <div class="vision-head">
-            <!-- <div class="vision-badge">04</div> -->
             <div>
               <h3 class="vision-title">Our Vision</h3>
               <p class="vision-sub">
-                To be a leader in the catering and facility management sector
-                within the Kingdom of Saudi Arabia by delivering high-quality,
-                innovative, and sustainable services.
+                To be a leading provider of catering and facilities solutions in Saudi Arabia,
+                through high-quality, innovative, and sustainable services.
               </p>
             </div>
           </div>
@@ -160,63 +164,52 @@
           <h4 class="vision-mini-title">We achieve this through:</h4>
 
           <ul class="vision-list">
-            <li>Rigorous self-auditing procedures</li>
-            <li>Implementation of continuous corrective actions</li>
-            <li>External evaluations and reviews</li>
-            <li>Strict adherence to a formalized and certified Quality Management System</li>
+            <li>Strict internal audits and self-assessments</li>
+            <li>Continuous corrective actions</li>
+            <li>External reviews and compliance checks</li>
+            <li>Commitment to certified quality management systems</li>
           </ul>
 
           <div class="vision-note">
-            <strong>Alignment with Vision 2030:</strong>
-            We actively contribute to improving quality of life,
-            supporting economic diversification, and developing
-            national talents and capabilities.
+            <strong>Aligned with Vision 2030:</strong>
+            Supporting quality of life, economic diversification, and talent development.
           </div>
         </div>
       </div>
 
-      <!-- Values & Satisfaction -->
       <div class="col-12 col-lg-6">
         <div>
 
-          <!-- Core Values -->
           <div class="col-12">
-            <div class="values-card reveal">
+            <div class="values-card reveal-left">
               <div class="values-head">
-                <!-- <div class="values-badge">04</div> -->
                 <div>
-                  <h3 class="values-title">Our Core Values</h3>
-                  <p class="values-sub">
-                    Principles that guide our relationships and partnerships.
-                  </p>
+                  <h3 class="values-title">Core Values</h3>
+                  <p class="values-sub">Principles we apply across every service and partnership.</p>
                 </div>
               </div>
 
               <div class="values-grid">
                 <div class="value-chip">Sustainability</div>
                 <div class="value-chip">Community Engagement</div>
-                <div class="value-chip">Adaptability</div>
-                <div class="value-chip">Collaboration with Clients & Stakeholders</div>
+                <div class="value-chip">Flexibility & Adaptability</div>
+                <div class="value-chip">Client & Stakeholder Collaboration</div>
               </div>
             </div>
           </div>
 
-          <!-- Customer Satisfaction -->
           <div class="col-12">
-            <div class="satisfaction-card reveal">
-              <h3 class="satisfaction-title">Customer Satisfaction</h3>
+            <div class="satisfaction-card reveal-left">
+              <h3 class="satisfaction-title">Client Satisfaction</h3>
               <p class="satisfaction-text">
-                Customer satisfaction is at the heart of everything we do.
-                We strive to deliver personalized services, maintain open communication,
-                ensure high-quality standards, meet deadlines, and continuously
-                enhance our offerings. By listening to client feedback and tailoring
-                our services to their specific needs, we build strong relationships
-                and a reputation for excellence in the industry.
+                Client satisfaction is at the heart of everything we do. We deliver tailored solutions,
+                maintain continuous communication, and ensure consistent quality and schedule discipline.
+                By listening closely and improving continuously, we build trusted long-term relationships.
               </p>
 
               <div class="satisfaction-highlights">
-                <span class="highlight-pill">Personalized Service</span>
-                <span class="highlight-pill">Effective Communication</span>
+                <span class="highlight-pill">Tailored Service</span>
+                <span class="highlight-pill">Clear Communication</span>
                 <span class="highlight-pill">On-Time Delivery</span>
                 <span class="highlight-pill">Continuous Improvement</span>
               </div>
@@ -230,161 +223,83 @@
   </div>
 </section>
 
-
+<!-- Services -->
 <section id="services" class="services-modern">
   <div class="container">
 
     <div class="section-header text-center">
-      <span class="section-label">Our Services</span>
-      <h2 class="section-title-light">
-        Integrated Catering Solutions
-      </h2>
+      <span class="section-label reveal-text">Services</span>
+      <h2 class="section-title-light reveal-text">Integrated Catering Solutions</h2>
     </div>
 
-    <div class="services-grid">
+    <div class="services-grid stagger">
 
-      <!-- Industrial -->
-      <div class="service-item" data-target="industrial">
+      <div class="service-item premium-card reveal-left">
         <img src="images/img6.jpg" alt="">
         <div class="service-overlay">
           <h3>Industrial, Onshore & Offshore Catering</h3>
-          <p>Comprehensive catering solutions for industrial sites and remote locations.</p>
-          <span class="service-more">View Details</span>
+          <p>Reliable solutions for industrial sites and remote locations.</p>
+          
         </div>
       </div>
 
-      <!-- Corporate -->
-      <div class="service-item" data-target="corporate">
+      <div class="service-item premium-card reveal-left">
         <img src="images/img7.jpg" alt="">
         <div class="service-overlay">
-          <h3>Corporate & Event Catering</h3>
-          <p>Flexible catering solutions for workplaces and private events.</p>
-          <span class="service-more">View Details</span>
+          <h3>Corporate Catering & Events</h3>
+          <p>Flexible services for offices, corporate events, and VIP gatherings.</p>
+          
         </div>
       </div>
 
-      <!-- Camps -->
-      <div class="service-item" data-target="camp">
+      <div class="service-item premium-card reveal-left">
         <img src="images/img8.jpg" alt="">
         <div class="service-overlay">
           <h3>Camp Management</h3>
-          <p>Establishment and management of fully integrated residential camps.</p>
-          <span class="service-more">View Details</span>
+          <p>End-to-end camp setup and daily operational management.</p>
+          
         </div>
       </div>
 
-      <!-- Remote -->
-      <div class="service-item" data-target="remote">
+      <div class="service-item premium-card reveal-left">
         <img src="images/img9.jpg" alt="">
         <div class="service-overlay">
-          <h3>Desert & Remote Location Catering</h3>
-          <p>Catering and logistics support for challenging environments.</p>
-          <span class="service-more">View Details</span>
+          <h3>Remote & Desert Sites</h3>
+          <p>Full catering and logistical support for challenging environments.</p>
+          
         </div>
       </div>
 
     </div>
+
+    <div class="text-center mt-5 reveal-item">
+      <a href="services-en.html" class="btn c1 btn-outline-custom">View All Services</a>
+    </div>
+
   </div>
 </section>
 
-<!-- Service Details -->
-<div class="service-details">
-
-  <!-- Industrial -->
-  <div id="industrial" class="service-detail">
-    <h3>Industrial, Onshore & Offshore Catering</h3>
-    <p>
-      We provide high-quality meals for teams working in industrial sites
-      and remote locations, ensuring operational efficiency and service continuity.
-    </p>
-
-    <ul>
-      <li>Integrated on-site catering solutions</li>
-      <li>Kitchen and dining facilities setup</li>
-      <li>Laundry services</li>
-      <li>Housekeeping and cleaning services</li>
-      <li>Mobilization and setup of accommodation and kitchen units</li>
-      <li>Senior & Junior staff accommodation</li>
-      <li>Kitchen and restaurant design and furnishing</li>
-    </ul>
-  </div>
-
-  <!-- Corporate -->
-  <div id="corporate" class="service-detail">
-    <h3>Corporate & Private Event Catering</h3>
-    <p>
-      We design customized catering solutions for companies and institutions
-      that enhance the work environment and boost productivity.
-    </p>
-
-    <ul>
-      <li>Corporate cafeterias (Indoor / Outdoor)</li>
-      <li>Office meals and buffet services</li>
-      <li>Corporate receptions and events</li>
-      <li>Dinners and conference catering</li>
-      <li>Weddings and private occasions</li>
-      <li>Picnics and barbecue events</li>
-    </ul>
-  </div>
-
-  <!-- Camps -->
-  <div id="camp" class="service-detail">
-    <h3>Camp Construction & Management</h3>
-    <p>
-      We provide integrated solutions for establishing and managing
-      temporary and permanent residential camps based on project requirements.
-    </p>
-
-    <ul>
-      <li>Catering and accommodation management</li>
-      <li>General cleaning and housekeeping</li>
-      <li>Recreational services</li>
-      <li>Laundry services</li>
-      <li>Security, clinics, and transportation</li>
-      <li>12 / 24-hour operational support</li>
-    </ul>
-  </div>
-
-  <!-- Remote -->
-  <div id="remote" class="service-detail">
-    <h3>Desert & Remote Location Catering</h3>
-    <p>
-      We deliver comprehensive catering and logistics support
-      for projects in desert and remote locations.
-    </p>
-
-    <ul>
-      <li>Specialized infrastructure for remote sites</li>
-      <li>Integrated catering and logistics management</li>
-      <li>Continuous service in harsh environments</li>
-      <li>Foodstuff trading and supply services</li>
-    </ul>
-  </div>
-
-</div>
-
+<!-- Why Us -->
 <section class="why-us">
   <div class="container">
     <div class="row">
 
       <div class="col-lg-6">
-        <h2>Why Blue Sea Catering?</h2>
-        <p>
-          We believe that catering goes beyond food.
-          It represents quality, safety, commitment, and
-          a deep understanding of each project’s nature.
-          That is why we work as a strategic partner to our
-          clients rather than just a service provider.
+        <h2 class="reveal-text">Why Blue Sea Catering?</h2>
+        <p class="reveal-text">
+          Catering is more than food. It’s about consistency, safety, and operational discipline.
+          We operate as a strategic partner—adapting to each project’s requirements and ensuring
+          reliable delivery at scale.
         </p>
       </div>
 
       <div class="col-lg-6">
-        <ul class="why-list">
-          <li>Extensive regional experience across multiple countries</li>
-          <li>Strict food quality and safety management systems</li>
-          <li>Operational flexibility suited for large-scale projects</li>
-          <li>Highly trained and qualified teams</li>
-          <li>Proven ability to operate in challenging and remote environments</li>
+        <ul class="why-list reveal-left">
+          <li>Regional experience across multiple countries</li>
+          <li>Strict quality and food safety standards</li>
+          <li>Operational flexibility for large-scale projects</li>
+          <li>Trained, professional teams</li>
+          <li>Proven readiness for remote & challenging environments</li>
         </ul>
       </div>
 
@@ -392,61 +307,52 @@
   </div>
 </section>
 
-
+<!-- CTA -->
 <section class="cta">
   <div class="container text-center">
-    <h2>Ready to Deliver the Right Catering Solution for Your Project</h2>
-    <p>
-      Contact us today and let us support you in managing
-      catering services with the highest standards of quality
-      and professionalism.
+    <h2 class="reveal-text">Ready to support your project with premium catering?</h2>
+    <p class="reveal-text">
+      Contact us today and let’s discuss the best-fit catering and operational solution for your needs.
     </p>
-    <a href="#contact" class="btn btn-primary-custom">
-      Contact Us
-    </a>
+    <a href="contact-en.html" class="btn btn-primary-custom reveal-item">Get in Touch</a>
   </div>
 </section>
 
+<!-- Safety -->
 <section id="safety" class="safety-modern">
   <div class="container">
     <div class="row align-items-center g-2">
 
       <div class="col-lg-6">
-        <span class="section-label">Health & Safety</span>
-        <h2 class="section-title-light">Strict Commitment to Quality & Safety Standards</h2>
-        <p class="section-text-light">
-          We implement a clear system for food safety management and operational quality,
-          starting from supplier selection through to final delivery at work sites.
-          Our goal is to provide a safe, consistent, and scalable catering experience
-          tailored to the size and nature of each project.
+        <span class="section-label reveal-text">Quality & Safety</span>
+        <h2 class="section-title-light reveal-text">Strict Commitment to Quality Standards</h2>
+        <p class="section-text-light reveal-text">
+          We apply structured food safety and operational quality controls—from supplier selection
+          to delivery at site. Our goal is a safe, consistent, and scalable service experience.
         </p>
 
         <div class="safety-points edge-mobile">
-
-          <div class="safety-point">
+          <div class="safety-point reveal-left">
             <h4>Food Safety</h4>
-            <p>Precise handling, storage, and preparation practices to prevent contamination and ensure ingredient quality.</p>
+            <p>Careful handling, storage, and preparation processes to prevent contamination.</p>
           </div>
-
-          <div class="safety-point">
-            <h4>Personal & Professional Hygiene</h4>
-            <p>Full adherence to hygiene procedures, PPE usage, and clean, organized work environments.</p>
+          <div class="safety-point reveal-left">
+            <h4>Personal & Workplace Hygiene</h4>
+            <p>Clear hygiene procedures, PPE use, and clean organized work zones.</p>
           </div>
-
-          <div class="safety-point">
-            <h4>Temperature Control & Transportation</h4>
-            <p>Strict temperature monitoring during preparation, storage, and transportation in line with standard operating procedures.</p>
+          <div class="safety-point reveal-left">
+            <h4>Temperature Control & Transport</h4>
+            <p>Standard operating procedures for heat control during prep, storage, and delivery.</p>
           </div>
-
-          <div class="safety-point">
-            <h4>Continuous Training & Audits</h4>
-            <p>Regular team training and ongoing audits to ensure continuous improvement and compliance.</p>
+          <div class="safety-point reveal-left">
+            <h4>Training & Continuous Audits</h4>
+            <p>Ongoing team training and recurring audits to ensure consistent compliance.</p>
           </div>
         </div>
       </div>
 
       <div class="col-lg-6">
-        <div class="safety-image-wrap">
+        <div class="safety-image-wrap reveal-right">
           <img src="images/img16.jpg" alt="Health & Safety">
           <div class="safety-badge">
             <span>Quality</span>
@@ -459,33 +365,29 @@
   </div>
 </section>
 
-<!-- Projects Section -->
+<!-- Projects -->
 <section id="projects" class="projects-modern">
   <div class="container">
 
-    <!-- Header -->
     <div class="projects-head">
       <div>
-        <span class="section-label">Our Projects</span>
-        <h2 class="section-title">A Project Portfolio That Proves Our Expertise</h2>
-        <p class="section-desc">
-          We take pride in delivering and operating catering and
-          support service projects across multiple sectors,
-          both inside and outside the Kingdom.
+        <span class="section-label reveal-text">Projects</span>
+        <h2 class="section-title reveal-text">A Track Record That Proves Experience</h2>
+        <p class="section-desc reveal-text">
+          We are proud to deliver and operate catering and support services across multiple sectors
+          in the region—inside and outside Saudi Arabia.
         </p>
       </div>
 
-      <!-- Tabs -->
-      <div class="projects-tabs">
-        <button class="tab-btn active" data-tab="completed">Completed Projects</button>
-        <button class="tab-btn" data-tab="running">Ongoing Projects</button>
+      <div class="projects-tabs reveal-item">
+        <button class="tab-btn active" data-tab="completed">Completed</button>
+        <button class="tab-btn" data-tab="running">Running</button>
       </div>
     </div>
 
-    <!-- Completed Projects (Images) -->
     <div class="tab-content active" id="completed">
       <div class="projects-grid">
-        <div class="project-card">
+        <div class="project-card reveal-left">
           <img src="images/img11.jpg" alt="">
           <div class="project-info">
             <span class="project-tag">Completed</span>
@@ -494,7 +396,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card reveal-left">
           <img src="images/img12.jpg" alt="">
           <div class="project-info">
             <span class="project-tag">Completed</span>
@@ -503,7 +405,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card reveal-left">
           <img src="images/img13.jpg" alt="">
           <div class="project-info">
             <span class="project-tag">Completed</span>
@@ -514,10 +416,9 @@
       </div>
     </div>
 
-    <!-- Running Projects (Images) -->
     <div class="tab-content" id="running">
       <div class="projects-grid">
-        <div class="project-card">
+        <div class="project-card reveal-left">
           <img src="images/img14.jpg" alt="">
           <div class="project-info">
             <span class="project-tag running">Running</span>
@@ -526,7 +427,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card reveal-left">
           <img src="images/img15.jpg" alt="">
           <div class="project-info">
             <span class="project-tag running">Running</span>
@@ -537,148 +438,103 @@
       </div>
     </div>
 
-    <!-- Accordion Lists -->
-    <div class="projects-accordion">
-
-      <!-- Completed List -->
-      <div class="acc-item">
-        <button type="button" class="acc-btn" data-acc="acc-completed">
-          View All Completed Projects
-          <span class="acc-icon">+</span>
-        </button>
-
-        <div class="acc-body" id="acc-completed">
-          <ul class="projects-names">
-            <li>Aseel Universal Garment – Jordan</li>
-            <li>AMC-AZDA JV Catering – Dammam, KSA</li>
-            <li>Metro VFR Limited – Dubai</li>
-            <li>Salini Construttori – Dubai</li>
-            <li>Todini Costruzioni Generali – Dubai</li>
-            <li>Belleli Energy – Sharjah</li>
-            <li>Dubai Polo Club – Dubai</li>
-            <li>Dubai Precast – Dubai</li>
-            <li>Sendan Al Emarat – Dubai</li>
-            <li>Sharjah Airport Free Zone – Sharjah</li>
-            <li>Sungwon Corporation – Dubai</li>
-            <li>Arabtec Construction LLC – Dubai</li>
-            <li>Bhawan Engineering L.L.C – Dubai</li>
-            <li>Kele Contracting Co. LLC – Dubai</li>
-            <li>Dutco Balfour Beatty – Dubai</li>
-            <li>Meydan Racecourse – Dubai</li>
-            <li>Transgulf – UAE & KSA</li>
-            <li>Al Laith Scaffolding LLC</li>
-            <li>Green Works LLC – Dubai</li>
-            <li>Deco Emirates – Dubai</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Running List -->
-      <div class="acc-item">
-        <button type="button" class="acc-btn" data-acc="acc-running">
-          View All Ongoing Projects
-          <span class="acc-icon">+</span>
-        </button>
-
-        <div class="acc-body" id="acc-running">
-          <ul class="projects-names">
-            <li>Elegancia MEP – Red Sea Project</li>
-            <li>Fast Construction – Red Sea Project</li>
-            <li>First Fix – Red Sea Project</li>
-          </ul>
-        </div>
-      </div>
-
+    <div class="text-center mt-5 reveal-item">
+      <a href="projects-en.html" class="btn btn-outline-custom">View All Projects</a>
     </div>
 
   </div>
 </section>
 
+<!-- Partners -->
 <section id="partners" class="partners-single">
   <div class="container">
-
-    <div class="section-header text-center reveal">
-      <span class="section-label">Our Success Partners</span>
-      <h2 class="section-title">Our Success Partners</h2>
-      <p class="section-desc">
-        We take pride in the trust of our partners and in being considered
-        a key contributor to the success of their projects.
-        We continuously strive to build long-term relationships
-        based on quality, commitment, and professionalism.
+    <div class="section-header text-center">
+      <span class="section-label reveal-text">Partners</span>
+      <h2 class="section-title reveal-text">Our Success Partners</h2>
+      <p class="section-desc reveal-text">
+        We value the trust of our partners and aim to build long-term relationships
+        based on quality, commitment, and professional delivery.
       </p>
     </div>
 
-    <div class="partners-image-wrapper reveal">
+    <div class="partners-image-wrapper reveal-item">
       <img src="images/partners.png" alt="Our Success Partners">
     </div>
-
   </div>
 </section>
 
+<!-- Contact (No Email) -->
 <section id="contact" class="contact-modern">
   <div class="container">
-    <div class="row g-1 align-items-start">
+    <div class="row g-3 align-items-start">
 
-      <!-- Left: Text + Cards -->
       <div class="col-12 col-lg-5">
-        <span class="section-label">Contact Us</span>
-        <h2 class="section-title-light">We Are Ready to Serve You</h2>
-        <p class="section-text-light">
-          Leave your details and we will get back to you shortly,
-          or contact us directly via phone or email.
+        <span class="section-label reveal-text">Contact</span>
+        <h2 class="section-title-light reveal-text">We’re Ready to Support You</h2>
+        <p class="section-text-light reveal-text">
+          Share your details and we’ll get back quickly— or contact us directly by phone or WhatsApp.
         </p>
 
         <div class="contact-cards edge-mobile">
+          <div class="contact-card reveal-left">
+            <h4>Phone</h4>
+            <p><a href="tel:+966559361915" class="contact-link">0559361915</a></p>
+          </div>
 
-<div class="contact-card">
-  <h4>Phone</h4>
-  <p>
-    <a href="tel:+966559361915" class="contact-link">
-      0559361915
-    </a>
-  </p>
-</div>
+          <div class="contact-card reveal-left">
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/966559361915" target="_blank" rel="noopener" class="contact-link">Start WhatsApp Chat</a></p>
+          </div>
 
-<div class="contact-card">
-  <h4>Email</h4>
-  <p>
-    <a href="mailto:info@mcatering.com" class="contact-link">
-      info@mcatering.com
-    </a>
-  </p>
-</div>
-
-          <div class="contact-card">
+          <div class="contact-card reveal-left">
             <h4>Address</h4>
-            <p>Umluj, Omar Bin Abdulaziz Street, 48321</p>
+            <p>Umluj, Omar Bin Abdulaziz St, 48321</p>
+          </div>
+
+          <div class="contact-card reveal-left">
+            <h4>Working Hours</h4>
+            <p>Sun – Thu: 9:00 AM – 6:00 PM</p>
           </div>
         </div>
       </div>
 
-      <!-- Right: Form -->
       <div class="col-12 col-lg-7">
-        <form class="contact-form">
+        <form class="contact-form reveal-item" id="contactForm">
+
           <div class="row g-3">
             <div class="col-md-6">
-              <input class="form-control" type="text" placeholder="Name" required>
+              <input class="form-control" type="text" placeholder="Full Name" required>
             </div>
 
             <div class="col-md-6">
               <input class="form-control" type="text" placeholder="Company" required>
             </div>
 
-            <div class="col-12">
-              <input class="form-control" type="email" placeholder="Email Address" required>
+            <div class="col-md-6">
+              <input class="form-control" type="tel" placeholder="Mobile Number" required>
+            </div>
+
+            <div class="col-md-6">
+              <input class="form-control" type="text" placeholder="City / Site Location" required>
+            </div>
+
+            <div class="col-md-6">
+              <input class="form-control" type="text" placeholder="Service Type" required>
             </div>
 
             <div class="col-12">
-              <textarea class="form-control" rows="6" placeholder="Write your message..." required></textarea>
+              <textarea class="form-control" rows="6" placeholder="Your message... (duration, estimated headcount, requirements)" required></textarea>
             </div>
 
             <div class="col-12">
-              <button class="btn btn-primary-custom w-100" type="submit">Send</button>
+             <button class="btn btn-primary-custom w-100" type="submit">
+  Send via WhatsApp
+</button>
+
             </div>
           </div>
+
+
         </form>
       </div>
 
@@ -686,24 +542,18 @@
   </div>
 </section>
 
-
-
+<!-- Footer -->
 <footer class="footer-modern">
   <div class="container">
-
     <div class="footer-top">
-      <!-- Brand -->
       <div class="footer-col">
         <h4 class="footer-title">Blue Sea Catering</h4>
         <p class="footer-text">
-          Catering and operational solutions delivered with high standards
-          of quality and safety across the Kingdom, offering operational readiness
-          and flexibility for large-scale and remote projects.
+          Premium catering and life support solutions with operational readiness
+          for large-scale and remote projects across Saudi Arabia.
         </p>
       </div>
 
-
-      <!-- QR + Social -->
       <div class="footer-col">
         <h4 class="footer-title">Follow Us</h4>
 
@@ -711,8 +561,7 @@
           <img src="images/qrcode.png" alt="QR Code">
           <div class="footer-qr-text">
             <p class="footer-text" style="margin:0">
-              Scan the QR code to save our contact details
-              or visit our official social media accounts.
+              Scan the QR code to save our contact details or visit our official channels.
             </p>
           </div>
         </div>
@@ -721,15 +570,12 @@
           <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="Instagram">
             <img src="images/instagram.png" alt="Instagram">
           </a>
-
           <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
             <img src="images/linkedin.png" alt="LinkedIn">
           </a>
-
           <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="Facebook">
             <img src="images/facebook.png" alt="Facebook">
           </a>
-
           <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
             <img src="images/whatsapp.png" alt="WhatsApp">
           </a>
@@ -740,13 +586,46 @@
     <div class="footer-bottom">
       <span>© 2026 Blue Sea Catering. All rights reserved.</span>
     </div>
-
   </div>
 </footer>
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Main JS -->
-  <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.getElementById("contactFormEn").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const name = this.querySelector('input[placeholder="Full Name"]').value.trim();
+  const company = this.querySelector('input[placeholder="Company / Entity"]').value.trim();
+  const phone = this.querySelector('input[placeholder="Mobile Number"]').value.trim();
+  const service = this.querySelector('input[placeholder="Service Type"]').value.trim();
+  const city = this.querySelector('input[placeholder="City / Site"]').value.trim();
+  const headcount = this.querySelector('input[placeholder="Estimated Headcount"]').value.trim();
+  const msg = this.querySelector('textarea').value.trim();
+
+  if(!service){
+    alert("Please enter the service type");
+    return;
+  }
+
+  const text =
+`New Inquiry - Blue Sea Catering
+
+Full Name: ${name}
+Company / Entity: ${company}
+Mobile: ${phone}
+Service Type: ${service}
+City / Site: ${city}
+Estimated Headcount: ${headcount}
+
+Message:
+${msg}`;
+
+  const wa = "https://wa.me/966559361915?text=" + encodeURIComponent(text);
+  window.open(wa, "_blank");
+});
+</script>
+
+
 </body>
 </html>
