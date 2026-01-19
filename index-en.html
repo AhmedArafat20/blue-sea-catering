@@ -592,16 +592,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
 <script>
-document.getElementById("contactFormEn").addEventListener("submit", function(e){
+document.getElementById("contactForm").addEventListener("submit", function(e){
   e.preventDefault();
 
-  const name = this.querySelector('input[placeholder="Full Name"]').value.trim();
-  const company = this.querySelector('input[placeholder="Company / Entity"]').value.trim();
-  const phone = this.querySelector('input[placeholder="Mobile Number"]').value.trim();
-  const service = this.querySelector('input[placeholder="Service Type"]').value.trim();
-  const city = this.querySelector('input[placeholder="City / Site"]').value.trim();
-  const headcount = this.querySelector('input[placeholder="Estimated Headcount"]').value.trim();
-  const msg = this.querySelector('textarea').value.trim();
+  const name = this.querySelector('[name="name"]').value.trim();
+  const company = this.querySelector('[name="company"]').value.trim();
+  const phone = this.querySelector('[name="phone"]').value.trim();
+  const city = this.querySelector('[name="city"]').value.trim();
+  const service = this.querySelector('[name="service"]').value.trim();
+  const msg = this.querySelector('[name="message"]').value.trim();
 
   if(!service){
     alert("Please enter the service type");
@@ -612,19 +611,19 @@ document.getElementById("contactFormEn").addEventListener("submit", function(e){
 `New Inquiry - Blue Sea Catering
 
 Full Name: ${name}
-Company / Entity: ${company}
+Company: ${company}
 Mobile: ${phone}
 Service Type: ${service}
 City / Site: ${city}
-Estimated Headcount: ${headcount}
 
 Message:
 ${msg}`;
 
-  const wa = "https://wa.me/966559361915?text=" + encodeURIComponent(text);
-  window.open(wa, "_blank");
+  const waUrl = "https://wa.me/966559361915?text=" + encodeURIComponent(text);
+  window.open(waUrl, "_blank");
 });
 </script>
+
 
 
 </body>
