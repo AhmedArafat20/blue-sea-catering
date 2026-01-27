@@ -2535,3 +2535,10 @@ p.pro{
 .nav-links li a:hover::after{
   width: 100%;
 }
+.m4{
+  margin-bottom: 23px;
+}
+.m6{
+  margin-top: 36px;
+  border-radius: 15px;
+}
